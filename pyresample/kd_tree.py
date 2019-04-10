@@ -126,7 +126,7 @@ def resample_gauss(source_geo_def, data, target_geo_def,
         channel 1 to k, w_k = exp(-dist^2/sigma_k^2).
         If only one channel is resampled sigmas is a single float value.
     neighbours : int, optional
-        The number of neigbours to consider for each grid point
+        The number of neighbours to consider for each grid point
     epsilon : float, optional
         Allowed uncertainty in meters. Increasing uncertainty
         reduces execution time
@@ -151,7 +151,7 @@ def resample_gauss(source_geo_def, data, target_geo_def,
         Source data resampled to target geometry
     data, stddev, counts : numpy array, numpy array, numpy array (if with_uncert == True)
         Source data resampled to target geometry.
-        Weighted standard devaition for all pixels having more than one source value
+        Weighted standard deviation for all pixels having more than one source value
         Counts of number of source values used in weighting per pixel
 
     """
@@ -207,7 +207,7 @@ def resample_custom(source_geo_def, data, target_geo_def,
         If only one channel is resampled weight_funcs is
         a single function object.
     neighbours : int, optional
-        The number of neigbours to consider for each grid point
+        The number of neighbours to consider for each grid point
     epsilon : float, optional
         Allowed uncertainty in meters. Increasing uncertainty
         reduces execution time
@@ -230,7 +230,7 @@ def resample_custom(source_geo_def, data, target_geo_def,
         Source data resampled to target geometry
     data, stddev, counts : numpy array, numpy array, numpy array (if with_uncert == True)
         Source data resampled to target geometry.
-        Weighted standard devaition for all pixels having more than one source value
+        Weighted standard deviation for all pixels having more than one source value.
         Counts of number of source values used in weighting per pixel
     """
 
@@ -289,7 +289,7 @@ def get_neighbour_info(source_geo_def, target_geo_def, radius_of_influence,
     radius_of_influence : float
         Cut off distance in meters
     neighbours : int, optional
-        The number of neigbours to consider for each grid point
+        The number of neighbours to consider for each grid point
     epsilon : float, optional
         Allowed uncertainty in meters. Increasing uncertainty
         reduces execution time
@@ -964,7 +964,7 @@ class XArrayResamplerNN(object):
         radius_of_influence : float
             Cut off distance in meters
         neighbours : int, optional
-            The number of neigbours to consider for each grid point.
+            The number of neighbours to consider for each grid point.
             Default 1. Currently 1 is the only supported number.
         epsilon : float, optional
             Allowed uncertainty in meters. Increasing uncertainty
