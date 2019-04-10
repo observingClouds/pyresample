@@ -262,9 +262,9 @@ class BaseDefinition(object):
             Number of processor cores to be used.
             Defaults to the nprocs set when instantiating object
         data_slice : slice object, optional
-            Calculate only cartesian coordnates for the defined slice
+            Calculate only cartesian coordinates for the defined slice
         cache : bool, optional
-            Store result the result. Requires data_slice to be None
+            Store the result. Requires data_slice to be None
 
         Returns
         -------
@@ -705,7 +705,7 @@ class DynamicAreaDefinition(object):
 
     The purpose of this class is to be able to adapt the area extent and shape
     of the area to a given set of longitudes and latitudes, such that e.g.
-    polar satellite granules can be resampled optimaly to a give projection.
+    polar satellite granules can be resampled optimaly to a given projection.
     """
 
     def __init__(self, area_id=None, description=None, projection=None,
